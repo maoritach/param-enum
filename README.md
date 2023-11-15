@@ -16,7 +16,7 @@
 3. Run the script:
 
     ```
-    python main.py [options]
+    python param-enum.py [options]
     ```
 
 ## Requirements
