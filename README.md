@@ -41,7 +41,7 @@ If the script is run without any command line arguments, it enters interactive m
 
 ## Result Display
 
-The script performs a GET request to the specified API endpoint and checks for the existence of certain parameter types in the response. The results are displayed in a table with colors indicating whether each parameter type was found.
+![Screenshot 2023-11-16 014703](https://github.com/maoritach/param-enum/assets/99506255/b05e0ed8-b007-4a35-9333-3e3e13b6c7fb)
 
 ## Dependencies
 
