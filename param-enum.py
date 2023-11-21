@@ -74,24 +74,19 @@ response_text = json.dumps(data)
 # Define the specific patterns to check
 patterns = ['"name": "body"', '"name": "query"', '"name": "path"', '"name": "fragment"', '"name": "header"', '"name": "artificalfragment"', '"name": "artificalquery"']
 
-#Define colors
-
-GREEN = colored("green")
-RED = colored("red")
+# Define colors
+GREEN = 'green'
+RED = 'red'
 
 # Check for each pattern and store results in a list for the table
 results = []
 for pattern in patterns:
     param_type = pattern.split('"')[3]
     if pattern in response_text:
-        results.append([param_type.capitalize() + " parameters", GREEN + "Yes"])
+        found = colored("Yes", GREEN)
     else:
-        results.append([param_type.capitalize() + " parameters", RED + "No"])
+        found = colored("No", RED)
+    results.append([param_type.capitalize() + " parameters", found])
 
 # Print the results in a table
 print(tabulate(results, headers=["Parameter", "Found"], tablefmt="rounded_outline"))
-
-
-
-
-
